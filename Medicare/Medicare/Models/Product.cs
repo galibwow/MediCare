@@ -16,7 +16,7 @@ namespace Medicare.Models
         public DateTime EntryDate { get; set; }
         public int ProductTypeId { get; set; }
 
-        public int ManufacturarId { get; set; }
+        public int ManufacturerId { get; set; }
         public virtual ProductType ProductType { get; set; }
         public virtual Manufacturar Manufacturar { get; set; }
         public virtual ICollection<BuyProduct> BuyProductList { get; set; }

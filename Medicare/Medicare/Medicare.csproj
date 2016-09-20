@@ -118,13 +118,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManufacturarsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609101450167_init.cs" />
-    <Compile Include="Migrations\201609101450167_init.Designer.cs">
-      <DependentUpon>201609101450167_init.cs</DependentUpon>
+    <Compile Include="Migrations\201609201950455_init.cs" />
+    <Compile Include="Migrations\201609201950455_init.Designer.cs">
+      <DependentUpon>201609201950455_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BuyProduct.cs" />
@@ -187,6 +190,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Manufacturars\Create.cshtml" />
+    <Content Include="Views\Manufacturars\Delete.cshtml" />
+    <Content Include="Views\Manufacturars\Details.cshtml" />
+    <Content Include="Views\Manufacturars\Edit.cshtml" />
+    <Content Include="Views\Manufacturars\Index.cshtml" />
+    <Content Include="Views\Groups\Create.cshtml" />
+    <Content Include="Views\Groups\Delete.cshtml" />
+    <Content Include="Views\Groups\Details.cshtml" />
+    <Content Include="Views\Groups\Edit.cshtml" />
+    <Content Include="Views\Groups\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -196,8 +214,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609101450167_init.resx">
-      <DependentUpon>201609101450167_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609201950455_init.resx">
+      <DependentUpon>201609201950455_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

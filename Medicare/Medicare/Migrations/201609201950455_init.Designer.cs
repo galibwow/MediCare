@@ -13,7 +13,7 @@ namespace Medicare.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201609101450167_init"; }
+            get { return "201609201950455_init"; }
         }
         
         string IMigrationMetadata.Source

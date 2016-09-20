@@ -27,5 +27,6 @@ D:\Office\Medicare\Medicare\Medicare\bin\System.Web.WebPages.Razor.xml
 D:\Office\Medicare\Medicare\Medicare\bin\Antlr3.Runtime.pdb
 D:\Office\Medicare\Medicare\Medicare\obj\Debug\Medicare.dll
 D:\Office\Medicare\Medicare\Medicare\obj\Debug\Medicare.pdb
-D:\Office\Medicare\Medicare\Medicare\obj\Debug\Medicare.Migrations.Init.resources
+D:\Office\Medicare\Medicare\Medicare\obj\Debug\Medicare.csprojResolveAssemblyReference.cache
+D:\Office\Medicare\Medicare\Medicare\obj\Debug\Medicare.Migrations.init.resources
 D:\Office\Medicare\Medicare\Medicare\obj\Debug\Medicare.csproj.GenerateResource.Cache
