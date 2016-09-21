@@ -40,7 +40,7 @@ namespace Medicare.Controllers
         public ActionResult Create()
         {
             ViewBag.ManufacturerId = new SelectList(db.Manufacturars, "ManufacturerId", "ManufacturarName");
-            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeId");
+            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeName");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace Medicare.Controllers
             }
 
             ViewBag.ManufacturerId = new SelectList(db.Manufacturars, "ManufacturerId", "ManufacturarName", product.ManufacturerId);
-            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeId", product.ProductTypeId);
+            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeName", product.ProductTypeId);
             return View(product);
         }
 
@@ -76,7 +76,7 @@ namespace Medicare.Controllers
                 return HttpNotFound();
             }
             ViewBag.ManufacturerId = new SelectList(db.Manufacturars, "ManufacturerId", "ManufacturarName", product.ManufacturerId);
-            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeId", product.ProductTypeId);
+            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeName", product.ProductTypeId);
             return View(product);
         }
 
@@ -94,7 +94,7 @@ namespace Medicare.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.ManufacturerId = new SelectList(db.Manufacturars, "ManufacturerId", "ManufacturarName", product.ManufacturerId);
-            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeId", product.ProductTypeId);
+            ViewBag.ProductTypeId = new SelectList(db.ProductTypes, "ProductTypeId", "ProductTypeName", product.ProductTypeId);
             return View(product);
         }
 

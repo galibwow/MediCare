@@ -9,7 +9,7 @@ namespace Medicare.Models
     {
         public int ProductTypeId { get; set; }
 
-        public int ProductTypeName { get; set; }
+        public string ProductTypeName { get; set; }
 
         public virtual ICollection<Product> ProductList { get; set; } 
     }
