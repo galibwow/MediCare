@@ -28,10 +28,10 @@ namespace Medicare.Models
 
         public DbSet<Manufacturar> Manufacturars { get; set; }
         public DbSet<Groups> Groupses { get; set; }
-        public DbSet<PlaceOrder> PlaceOrders { get; set; }
+        
 
-        public DbSet<BuyProduct> BuyProducts { get; set; } 
-
+        public DbSet<BuyProduct> BuyProducts { get; set; }
+        public DbSet<Payment> Payments { get; set; } 
         
     }
 }

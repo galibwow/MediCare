@@ -46,7 +46,7 @@ namespace Medicare.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,FirstName,MiddleName,LastName,MobileNo,Password,Address,ConfirmPassword")] User user)
+        public ActionResult Create([Bind(Include = "UserId,FirstName,MiddleName,LastName,MobileNo,Password,Address,ConfirmPassword,Email,CreditCard,DateOfEnterence")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Medicare.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,FirstName,MiddleName,LastName,MobileNo,Password,Address,ConfirmPassword")] User user)
+        public ActionResult Edit([Bind(Include = "UserId,FirstName,MiddleName,LastName,MobileNo,Password,Address,ConfirmPassword,Email,CreditCard,DateOfEnterence")] User user)
         {
             if (ModelState.IsValid)
             {

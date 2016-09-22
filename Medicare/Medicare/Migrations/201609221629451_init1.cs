@@ -7,12 +7,12 @@ namespace Medicare.Migrations
     {
         public override void Up()
         {
-            AlterColumn("dbo.ProductType", "ProductTypeName", c => c.String());
+            DropColumn("dbo.BuyProduct", "Price");
         }
         
         public override void Down()
         {
-            AlterColumn("dbo.ProductType", "ProductTypeName", c => c.Int(nullable: false));
+            AddColumn("dbo.BuyProduct", "Price", c => c.Decimal(nullable: false, precision: 18, scale: 2));
         }
     }
 }
