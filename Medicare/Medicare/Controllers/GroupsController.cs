@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Medicare.BLL;
 using Medicare.Models;
 
 namespace Medicare.Controllers
@@ -48,17 +49,39 @@ namespace Medicare.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "GroupsId,GroupName")] Groups groups)
         {
-            if (ModelState.IsValid)
+            GroupsManager groupsManager = new GroupsManager();
+            try
             {
-                db.Groupses.Add(groups);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+
+
+                if (ModelState.IsValid)
+                {
+                    if (groupsManager.IsNameExist(groups))
+                    {
+                        ViewBag.ErrorMessage = "Name Already Exist";
+                        return View();
+                    }
+                    else
+                    {
+                        db.Groupses.Add(groups);
+                        db.SaveChanges();
+                        ViewBag.successMessage = "Save Successfully";
+                        return RedirectToAction("Index");
+                    }
+                }
+                
             }
-
+            catch (Exception exception)
+            {
+                ViewBag.ExceptionMessage = exception.Message;
+            }
             return View(groups);
+            
         }
+    
 
-        // GET: Groups/Edit/5
+
+    // GET: Groups/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)

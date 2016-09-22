@@ -50,6 +50,11 @@ namespace Medicare.Controllers
         public ActionResult Create([Bind(Include = "ManufacturerId,ManufacturarName,CompanyDetails")] Manufacturar manufacturar)
         {
             ManufaturarManager manager=new ManufaturarManager();
+
+            try
+            {
+
+            
             if (ModelState.IsValid)
             {
                 if (manager.IsNameExist(manufacturar))
@@ -60,9 +65,18 @@ namespace Medicare.Controllers
                 {
                     db.Manufacturars.Add(manufacturar);
                     db.SaveChanges();
+                    ViewBag.successMessage = "Save Successfully";
                     return RedirectToAction("Index");  
                 }
                 
+            }
+
+           
+            }
+            catch (Exception exception)
+            {
+
+                ViewBag.ExceptionMessage=exception.Message;
             }
 
             return View(manufacturar);

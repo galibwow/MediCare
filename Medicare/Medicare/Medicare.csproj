@@ -118,14 +118,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BLL\GroupsManager.cs" />
     <Compile Include="BLL\ManufaturarManager.cs" />
+    <Compile Include="BLL\ProductTypeManager.cs" />
     <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManufacturarsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductTypesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="DAL\GroupsGateway.cs" />
     <Compile Include="DAL\ManufacturerGateway.cs" />
+    <Compile Include="DAL\ProductTypeGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
