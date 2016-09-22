@@ -27,6 +27,12 @@ namespace Medicare.Models
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
 
-        public virtual ICollection<BuyProduct> BuyProductList { get; set; } 
+
+        public string Email { get; set; }
+
+        public string CreditCard { get; set; }
+
+        public DateTime DateOfEnterence { get; set; }
+        public virtual ICollection<Order>OrderList { get; set; } 
     }
 }

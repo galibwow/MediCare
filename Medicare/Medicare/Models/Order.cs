@@ -9,17 +9,24 @@ namespace Medicare.Models
     {
 
         public int OrderId { get; set; }
+        public int UserId { get; set; }
+        public int PaymentId { get; set; }
 
-        public int ProductId { get; set; }
+        public DateTime OrderDate { get; set; }
 
+        public decimal SalesTax { get; set; }
 
-        public decimal TotalPrice { get; set; }
+        public string ErrorLog { get; set; }
 
-        public bool Status { get; set; }
+        public string ErrorMessage { get; set; }
 
-        public string OrderNumber { get; set; }
+        public bool PaidStatus { get; set; }
+        public DateTime PaymentDate { get; set; }
+        public User User { get; set; }
+        public Payment Payment { get; set; }
+        
 
-        public virtual ICollection<PlaceOrder> PlaceOrderList { get; set; }  
+        public virtual ICollection<BuyProduct> BuyProductList { get; set; } 
         
     }
 }

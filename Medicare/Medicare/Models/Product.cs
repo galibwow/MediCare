@@ -17,7 +17,9 @@ namespace Medicare.Models
          [DisplayName("Product Price")]
         public decimal ProductPrice { get; set; }
          [DisplayName("Product Quantity")]
-        public decimal ProductQuantity { get; set; }
+        public decimal ProductQuantityperUnit { get; set; }
+
+         public decimal UnitePrice { get; set; }
 
          [DisplayName("Entry Date")]
          [DataType(DataType.Date)]
@@ -27,10 +29,14 @@ namespace Medicare.Models
         public int ProductTypeId { get; set; }
          [DisplayName("Manufacturer Name")]
         public int ManufacturerId { get; set; }
+
+         public string Picture { get; set; }
+
+         public string BatchNo { get; set; }
         public virtual ProductType ProductType { get; set; }
         public virtual Manufacturar Manufacturar { get; set; }
         public virtual ICollection<BuyProduct> BuyProductList { get; set; }
 
-        public virtual ICollection<PlaceOrder> PlaceOrderList { get; set; } 
+        
     }
 }
