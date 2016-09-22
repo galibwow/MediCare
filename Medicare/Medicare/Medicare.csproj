@@ -118,18 +118,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BLL\ManufaturarManager.cs" />
     <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManufacturarsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductTypesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="DAL\ManufacturerGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609221604519_init.cs" />
-    <Compile Include="Migrations\201609221604519_init.Designer.cs">
-      <DependentUpon>201609221604519_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201609221629451_init1.cs" />
     <Compile Include="Migrations\201609221629451_init1.Designer.cs">
@@ -275,9 +273,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609221604519_init.resx">
-      <DependentUpon>201609221604519_init.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609221629451_init1.resx">
       <DependentUpon>201609221629451_init1.cs</DependentUpon>
     </EmbeddedResource>

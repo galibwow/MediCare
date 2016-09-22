@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Medicare.BLL;
 using Medicare.Models;
 
 namespace Medicare.Controllers
@@ -48,11 +49,20 @@ namespace Medicare.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ManufacturerId,ManufacturarName,CompanyDetails")] Manufacturar manufacturar)
         {
+            ManufaturarManager manager=new ManufaturarManager();
             if (ModelState.IsValid)
             {
-                db.Manufacturars.Add(manufacturar);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (manager.IsNameExist(manufacturar))
+                {
+                    ViewBag.errorMessage= "Name already exist";
+                }
+                else
+                {
+                    db.Manufacturars.Add(manufacturar);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");  
+                }
+                
             }
 
             return View(manufacturar);
