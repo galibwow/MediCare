@@ -147,5 +147,12 @@ namespace Medicare.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public JsonResult IsNameExist(string ManufacturarName)
+        {
+            return Json(!db.Manufacturars.Any(x => x.ManufacturarName == ManufacturarName),
+                                         JsonRequestBehavior.AllowGet);
+        }
     }
 }

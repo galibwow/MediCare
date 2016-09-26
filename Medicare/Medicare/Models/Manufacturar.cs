@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Medicare.Models
 {
@@ -12,6 +13,7 @@ namespace Medicare.Models
         [Key]
         public int ManufacturerId { get; set; }
         [DisplayName("Manufacturer Name")]
+        [Remote("IsNameExist","Manufacturars",ErrorMessage = "Manufacturer Name Already Exist")]
         public string ManufacturarName { get; set; }
         [DisplayName("Company Details")]
         public string CompanyDetails { get; set; }

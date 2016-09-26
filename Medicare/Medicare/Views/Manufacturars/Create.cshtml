@@ -20,7 +20,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ManufacturarName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ManufacturarName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.ManufacturarName, new { htmlAttributes = new { @class = "form-control",@id="ManufacturerName" } })
                 @Html.ValidationMessageFor(model => model.ManufacturarName, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -50,4 +50,37 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    @*<script>
+        
+
+        $(document).ready(function() {
+            $('#ManufacturerName').keyup(function () {
+                var manuName = $(this).val();
+
+                if (manuName.length >= 3) {
+                    $.ajax({
+                        url: '@Url.Action("IsNameExist", "Manufacturars")',
+                        method: 'post',
+                        data: { manufacturar: manuName },
+                        dataType: 'json',
+                        success: function (manufacturar) {
+                            var divElement = $('#divOutput');
+                            if (manufacturar== 1) {
+                                divElement.text('name already in use');
+                                divElement.css('color', 'red');
+                            }
+                            else {
+                                divElement.text('Name available');
+                                divElement.css('color', 'green');
+                            }
+                        },
+                        error: function (err) {
+                            alert(err);
+                        }
+                    });
+                }
+            });
+        });
+    </script>*@
 }

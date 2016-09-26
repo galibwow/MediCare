@@ -146,5 +146,11 @@ namespace Medicare.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public JsonResult IsNameExist(string GroupName)
+        {
+            return Json(!db.Groupses.Any(x => x.GroupName == GroupName),
+                                         JsonRequestBehavior.AllowGet);
+        }
     }
 }

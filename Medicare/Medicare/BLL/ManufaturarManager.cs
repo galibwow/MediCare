@@ -8,18 +8,13 @@ using Medicare.Models;
 namespace Medicare.BLL
 {
     public class ManufaturarManager
-    { 
-        
-        ManufacturerGateway manufacturerGateway=new ManufacturerGateway();
+    {
+
+       ManufacturerGateway manufacturerGateway=new ManufacturerGateway();
 
         public bool IsNameExist(Manufacturar manufacturar)
         {
-            
-            if (manufacturerGateway.IsNameExist(manufacturar))
-            {
-                return true;
-            }
-            return false;
+            return manufacturerGateway.IsNameExist(manufacturar);
         }
     }
 }

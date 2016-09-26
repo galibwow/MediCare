@@ -123,5 +123,12 @@ namespace Medicare.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public JsonResult IsNameExist(string ProductTypeName)
+        {
+            return Json(!db.ProductTypes.Any(x => x.ProductTypeName == ProductTypeName),
+                                         JsonRequestBehavior.AllowGet);
+        }
     }
 }
