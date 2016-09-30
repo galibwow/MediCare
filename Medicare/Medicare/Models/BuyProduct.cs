@@ -11,9 +11,7 @@ namespace Medicare.Models
         public int OrderId { get; set; }
         public int ProductId { get; set; }
         public string OrderNumber { get; set; }
-
-        
-
+     
         public decimal Quantity { get; set; }
 
         public decimal Discount { get; set; }
@@ -21,10 +19,6 @@ namespace Medicare.Models
         public decimal TotalPrice { get; set; }
 
         public DateTime BillDate { get; set; }
-        
-
-        
-
         
         public virtual Product Product { get; set; }
 
